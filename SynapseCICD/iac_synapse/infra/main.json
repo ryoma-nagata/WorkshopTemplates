@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.6.18.56646",
-      "templateHash": "16114290678162088156"
+      "templateHash": "11238742641072353650"
     }
   },
   "parameters": {
@@ -14,18 +14,31 @@
       "defaultValue": "japaneast"
     },
     "project": {
-      "type": "string"
+      "type": "string",
+      "metadata": {
+        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+      }
     },
     "env": {
       "type": "string",
+      "metadata": {
+        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+      },
       "allowedValues": [
+        "demo",
+        "poc",
         "dev",
+        "test",
+        "prod",
         "stg"
       ]
     },
     "deployment_id": {
       "type": "string",
-      "defaultValue": "01"
+      "defaultValue": "01",
+      "metadata": {
+        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+      }
     },
     "storageIPWhiteLists": {
       "type": "array",
@@ -34,7 +47,10 @@
           "value": "*.*.*.*",
           "action": "Allow"
         }
-      ]
+      ],
+      "metadata": {
+        "description": "許可したいIPリスト"
+      }
     },
     "sqlIPWhiteLists": {
       "type": "array",
@@ -44,7 +60,10 @@
           "startIpAddress": "0.0.0.0",
           "endIpAddress": "255.255.255.255"
         }
-      ]
+      ],
+      "metadata": {
+        "description": "許可したいIPリスト"
+      }
     },
     "AdminGroupName": {
       "type": "string",
@@ -62,6 +81,9 @@
     "sqlPoolBackupType": {
       "type": "string",
       "defaultValue": "LRS",
+      "metadata": {
+        "description": "SQLPoolのバックアップタイプ"
+      },
       "allowedValues": [
         "LRS",
         "GRS"
@@ -69,7 +91,10 @@
     },
     "sqlPooldwu": {
       "type": "string",
-      "defaultValue": "DW100c"
+      "defaultValue": "DW100c",
+      "metadata": {
+        "description": "SQLPoolの性能SKU"
+      }
     }
   },
   "variables": {
