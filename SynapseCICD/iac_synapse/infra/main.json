@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.6.18.56646",
-      "templateHash": "1885011573331696361"
+      "templateHash": "15690413634509320822"
     }
   },
   "parameters": {
@@ -77,6 +77,7 @@
     },
     "AdminGroupObjectID": {
       "type": "string",
+      "defaultValue": "",
       "metadata": {
         "description": "セキュリティグループのプリンシパルIDを入力すると自動で権限が付与されます"
       }

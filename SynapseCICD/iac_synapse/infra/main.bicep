@@ -36,7 +36,7 @@ param sqlIPWhiteLists array = [
 @description('セキュリティグループの名称を入力すると自動で権限が付与されます')
 param AdminGroupName string = ''
 @description('セキュリティグループのプリンシパルIDを入力すると自動で権限が付与されます')
-param AdminGroupObjectID string 
+param AdminGroupObjectID string = ''
 @allowed([
   'LRS'
   'GRS'
