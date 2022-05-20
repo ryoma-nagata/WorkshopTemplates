@@ -4,7 +4,8 @@ targetScope = 'resourceGroup'
 // general params
 @description('リソースのデプロイリージョン')
 param location string = 'japaneast'
-@description('リソース名は"project-deployment_id-リソース種類-env"となります')
+
+@description('リソース名はproject-deployment_id-リソース種類-envとなります')
 param project string 
 @allowed([
   'demo'
@@ -14,9 +15,9 @@ param project string
   'prod'
   'stg'
 ])
-@description('リソース名は"project-deployment_id-リソース種類-env"となります')
+@description('リソース名はproject-deployment_id-リソース種類-envとなります')
 param env string 
-@description('リソース名は"project-deployment_id-リソース種類-env"となります')
+@description('リソース名はproject-deployment_id-リソース種類-envとなります')
 param deployment_id string = '01'
 @description('許可したいIPリスト')
 param storageIPWhiteLists array =[
