@@ -5,24 +5,27 @@
     "_generator": {
       "name": "bicep",
       "version": "0.6.18.56646",
-      "templateHash": "11238742641072353650"
+      "templateHash": "1885011573331696361"
     }
   },
   "parameters": {
     "location": {
       "type": "string",
-      "defaultValue": "japaneast"
+      "defaultValue": "japaneast",
+      "metadata": {
+        "description": "リソースのデプロイリージョン"
+      }
     },
     "project": {
       "type": "string",
       "metadata": {
-        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+        "description": "リソース名は\"project-deployment_id-リソース種類-env\"となります"
       }
     },
     "env": {
       "type": "string",
       "metadata": {
-        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+        "description": "リソース名は\"project-deployment_id-リソース種類-env\"となります"
       },
       "allowedValues": [
         "demo",
@@ -37,7 +40,7 @@
       "type": "string",
       "defaultValue": "01",
       "metadata": {
-        "description": "リソース名は<project>-<deployment_id>-リソース種類-<env>となります"
+        "description": "リソース名は\"project-deployment_id-リソース種類-env\"となります"
       }
     },
     "storageIPWhiteLists": {
